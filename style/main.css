@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Red Hat Display', sans-serif;
+    /* weight 500, 700, 900 */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20% 0;
+    background-image: url("../images/pattern-background-mobile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+main {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
+    box-shadow: 2px 5px 7px 2px #EEE;
+    border-radius: 1.25em;
+    padding-bottom: 8%;
+    background-color: white;
+    margin-bottom: 1.2em;
+}
+
+.container {
+    width: 100%;
+}
+
+.image-container {
+    margin-bottom: 1.875em;
+    grid-area: 1 / 1 / span 1 / span 4;
+}
+
+.image-container > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.25em 1.25em 0 0;
+}
+
+.text-container {
+    text-align: center;
+    grid-area: 2 / 1 / span 1 / span 4;
+    margin-bottom: 1.2em;
+}
+
+h1 {
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+    font-size: 1.5em;
+    margin-bottom: 0.85em;
+}
+
+h1 + p {
+    color: hsl(224, 23%, 55%);
+    font-weight: 500;
+    line-height: 1.6em;
+    padding: 0 3%;
+}
+
+.functionality-container {
+    grid-area: 3 / 1 / span 1 / span 4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.plan-sub-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 7% 2%;
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 0.9em;
+    margin-bottom: 1.2em;
+}
+
+.type-price-sub-container .type {
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+    font-size: 0.9em;
+}
+
+.type-price-sub-container .price {
+    color: hsl(224, 23%, 55%);
+    font-weight: 700;
+    font-size: 0.92em;
+}
+
+.plan-sub-container span {
+    text-decoration: underline;
+    font-size: 0.85em;
+    color: hsl(245, 75%, 52%);
+    font-weight: 900;
+    margin-left: 2em;
+    transition: all 0.1s ease-in-out;
+}
+
+.plan-sub-container span:hover {
+    cursor: pointer;
+    color: hsl(242, 60%, 78%);
+    text-decoration: none;
+}
+
+.proceed {
+    width: 90%;
+    background-color: hsl(245, 75%, 52%);
+    color: white;
+    font-size: 0.9em;
+    font-weight: 700;
+    border-radius: 0.8em;
+    text-align: center;
+    padding: 6%;
+    border: 0;
+    margin-bottom: 1.5em;
+    box-shadow: 0 3px 11px 3px hsl(251, 70%, 92%);
+    transition: all 0.15s ease-in-out;
+}
+
+.proceed:hover {
+    cursor: pointer;
+    background-color: hsl(245, 83%, 68%);
+}
+
+.proceed + span {
+    color: hsl(223, 10%, 53%);
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    transition: all 0.15s ease-in-out;
+}
+
+.proceed + span:hover {
+    cursor: pointer;
+    color: hsl(221, 31%, 19%);
+}
+
+footer {
+    text-align: center;
+    font-weight: 700;
+}
+
+@media (min-width: 400px) {
+    main {
+        width: 80%;
+    }
+}
+
+@media (min-width: 500px) {
+    main {
+        width: 70%;
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        background-image: url("../images/pattern-background-desktop.svg");
+    }
+
+    main {
+        width: 390px;
+        height: 620px;
+    }
+
+    .text-container,
+    .functionality-container {
+        padding: 0 5%;
+    }
+
+    .plan-sub-container {
+        padding: 5% 2%;
+        margin-bottom: 1.4em;
+    }
+
+    .plan-sub-container span {
+        margin-left: 3.7em;
+    }
+
+    .proceed {
+        padding: 4%;
+        margin-bottom: 1.8em;
+    }
+}
